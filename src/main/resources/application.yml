@@ -1,0 +1,27 @@
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+
+  h2:
+    console:
+      enabled: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 170160626812-7suoqglc5k86qpup4qvka64t7lien5io.apps.googleusercontent.com
+            client-secret: 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
+            redirect-uri: http://springboot-developer-env.eba-x8aaxxsv.ap-northeast-2.elasticbeanstalk.com/login/oauth2/code/goolge
+
+            scope:
+              - email
+              - profile
+
+jwt:
+  issuer: ajufresh@gmail.com
+  secret_key: study-springboot
